@@ -1,9 +1,9 @@
 @custom-media --breakpoint (width < 768px);
 
 .littlefoot {
-  --button-background-color: #78c535;
+  --button-background-color: #f94141;
   --button-text-color: #fff;
-  --button-active-background-color: #5aca3c;
+  --button-active-background-color: #6d1b1b;
   --button-active-text-color: #fff;
   --button-border-radius: 0.5rem;
   --button-height: 1rem;
@@ -193,8 +193,17 @@
 }
 
 @media print {
+
   .littlefoot__popover,
   .littlefoot__button {
     display: none;
   }
+}
+
+/* added a new class for changing color upon hovering */
+.hovered {
+  --button-background-color: #7ae769;
+  --button-text-color: #fff;
+  --button-active-background-color: #4b6f32;
+  --button-active-text-color: #fff;
 }

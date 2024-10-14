@@ -19,15 +19,16 @@ const hoverHandler = (action: FootnoteAction) => (event: Event) => {
   const id = getFootnoteId(element)
   if (id) {
     //check if footnote ID hovered over before
-    if(!hoveredFootnotes.has(id)){
-      hoveredFootnotes.add(id) 
+    if (!hoveredFootnotes.has(id)) {
+      hoveredFootnotes.add(id)
       hoverCounter++
       const hoverCounterElement = document.getElementById('hoverCounter')
-      if(hoverCounterElement){
-        hoverCounterElement.textContent=hoverCounter.toString()
+      if (hoverCounterElement) {
+        hoverCounterElement.textContent = hoverCounter.toString()
       }
+      element?.classList.add('hovered');
     }
-  
+
     action(id)
   }
 }

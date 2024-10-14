@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footnote Example</title>
-    <link
-        rel="stylesheet"
-        href="littlefoot.css"
-    />
+    <link rel="stylesheet" href="littlefoot.css" />
 </head>
+
 <body>
 
     <!-- Content Section -->
@@ -20,11 +19,19 @@
         <sup id="fnref:1">
             <a href="#fn:1">1</a>
         </sup>
+        This is more text with another footnote.
+        <sup id="fnref:2">
+            <a href="#fn:2">2</a>
+        </sup>
+        And... yet another one, because why not!
+        <sup id="fnref:3">
+            <a href="#fn:3">3</a>
+        </sup>
     </p>
 
     <!-- Counter for Hovered Footnotes -->
     <div>
-        <p>Unique Footnotes HoveredL <span id="hoverCounter">0</span></p>
+        <p>Unique Footnotes Hovered: <span id="hoverCounter">0</span></p>
     </div>
 
     <!-- Footnote List -->
@@ -33,14 +40,18 @@
             <li class="footnote" id="fn:1">
                 <p>footnote. <a href="#fnref:1" title="return to article">↩</a></p>
             </li>
+            <li class="footnote" id="fn:2">
+                <p>footnote. <a href="#fnref:2" title="return to article">↩</a></p>
+            </li>
+            <li class="footnote" id="fn:3">
+                <p>footnote. <a href="#fnref:3" title="return to article">↩</a></p>
+            </li>
         </ol>
     </div>
-    <script
-        src="https://unpkg.com/littlefoot/dist/littlefoot.js"
-        type="application/javascript"
-    ></script>
+    <script src="../dist/littlefoot.js" type="application/javascript"></script>
     <script type="application/javascript">
         littlefoot.littlefoot() // Pass any littlefoot settings here.
     </script>
 </body>
+
 </html>

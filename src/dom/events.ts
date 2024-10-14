@@ -9,11 +9,25 @@ const closestTarget = (event: Event, selector: string) =>
 const getFootnoteId = (element: HTMLElement | null) =>
   element?.dataset.footnoteId
 
+// initializing for tracking unique footnotes hovered over
+const hoveredFootnotes = new Set<string>()
+let hoverCounter = 0
+
 const hoverHandler = (action: FootnoteAction) => (event: Event) => {
   event.preventDefault()
   const element = closestTarget(event, SELECTOR_FOOTNOTE)
   const id = getFootnoteId(element)
   if (id) {
+    //check if footnote ID hovered over before
+    if(!hoveredFootnotes.has(id)){
+      hoveredFootnotes.add(id) 
+      hoverCounter++
+      const hoverCounterElement = document.getElementById('hoverCounter')
+      if(hoverCounterElement){
+        hoverCounterElement.textContent=hoverCounter.toString()
+      }
+    }
+  
     action(id)
   }
 }

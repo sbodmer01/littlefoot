@@ -1,9 +1,9 @@
 @custom-media --breakpoint (width < 768px);
 
 .littlefoot {
-  --button-background-color: #949494;
+  --button-background-color: #78c535;
   --button-text-color: #fff;
-  --button-active-background-color: #3f3f3f;
+  --button-active-background-color: #5aca3c;
   --button-active-text-color: #fff;
   --button-border-radius: 0.5rem;
   --button-height: 1rem;

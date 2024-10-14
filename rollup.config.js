@@ -24,8 +24,9 @@ export default [
     context: 'window',
     output: {
       name: 'littlefoot',
-      file: pkg.browser,
+      file: 'dist/littlefoot.js', // Using
       format: 'umd',
+      exports: 'named', 
     },
   },
   {
@@ -35,8 +36,8 @@ export default [
     context: 'window',
     output: [
       {
-        exports: 'named',
-        file: pkg.main,
+        exports: 'named', 
+        file: 'dist/littlefoot.cjs.js',
         format: 'cjs',
       },
     ],
@@ -49,7 +50,7 @@ export default [
     output: [
       {
         exports: 'named',
-        file: pkg.module,
+        file: 'dist/littlefoot.mjs',
         format: 'es',
       },
     ],
